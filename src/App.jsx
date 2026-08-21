@@ -16,6 +16,7 @@ import RegisterPage       from '@/pages/RegisterPage';
 import SignInPage         from '@/pages/SignInPage';
 import WhitepaperPage     from '@/pages/WhitepaperPage';
 import NotFoundPage       from '@/pages/NotFoundPage';
+import BitcoinPage        from '@/pages/BitcoinPage';
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60_000, retry: 1, refetchOnWindowFocus: false } },
@@ -51,6 +52,7 @@ export default function App() {
             <Route path="/register"            element={<RegisterPage />}       />
             <Route path="/signin"              element={<SignInPage />}         />
             <Route path="/whitepaper"          element={<WhitepaperPage />}     />
+            <Route path="/bitcoin"             element={<BitcoinPage />}        />
             <Route path="*"                    element={<NotFoundPage />}       />
           </Routes>
         </AuthProvider>
